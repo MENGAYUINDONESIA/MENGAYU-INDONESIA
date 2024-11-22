@@ -1,0 +1,223 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff8f5;
+}
+
+.custom-bg {
+    background: url('https://source.unsplash.com/featured/?abstract,colors') center/cover no-repeat;
+    position: relative;
+}
+
+.header {
+    background: linear-gradient(to top, #fff8f5 50%, #f4f0f5), url('background-pattern.png') center/cover no-repeat;
+    color: #333;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.logo-container {
+    display: inline-block;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    position: relative;
+}
+
+.logo-container img {
+    display: block;
+    border-radius: 50%;
+}
+
+.text-gray-600 {
+    color: #6c757d;
+}
+
+.social-icons a {
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    color: #000;
+}
+
+.button-card {
+    position: relative;
+    background-color: #ffaadd;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.button-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.button-card:hover {
+    background-color: #ffaadd;
+    transform: translateY(-5px);
+}
+
+.button-card::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+    transform: translate(-50%, -50%);
+}
+
+.button-card:hover::after {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.card__group {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card__image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card__content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card__content h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card__content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.card__content a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.card__content a:hover {
+    color: #0056b3;
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 1024px) {
+    .card__group {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 1.5rem 0;
+    }
+
+    .header {
+        padding: 1.5rem 0;
+    }
+
+    .logo-container img {
+        width: 70px;
+        height: 70px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-gray-600 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsif untuk ponsel */
+@media (max-width: 768px) {
+    .card__group {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding: 1rem 0;
+    }
+
+    .logo-container img {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .text-gray-600 {
+        font-size: 0.85rem;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+
+    .button-card {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsif untuk layar kecil (ponsel kecil) */
+@media (max-width: 480px) {
+    .header {
+        padding: 0.75rem 0;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    .text-gray-600 {
+        font-size: 0.8rem;
+    }
+
+    .social-icons a {
+        font-size: 1.25rem;
+    }
+
+    .button-card {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
